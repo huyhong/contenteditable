@@ -65,16 +65,15 @@
                         }
                     });
                 } else if(settings.newLineOnEnterKey == "br"){
+                    // Modified http://stackoverflow.com/a/12957539 with thin line space
                     $(this).keypress(function(e){
                         var keycode = (e.keyCode ? e.keyCode : e.which);
                         if(keycode == '13') {
                             e.preventDefault();
-                            // Modified http://stackoverflow.com/a/12957539 with thin line space
                             if (window.getSelection) {
                               selection = window.getSelection();
                               range = selection.getRangeAt(0);
                               br = document.createElement("br");
-                              fauxCursor = document.createElement("span");
                               textNode = document.createTextNode("\u200a");
                               range.deleteContents();
                               range.insertNode(br);
