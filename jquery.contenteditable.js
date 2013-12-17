@@ -82,7 +82,6 @@
                               range.selectNodeContents(textNode);
                               selection.removeAllRanges();
                               selection.addRange(range);
-                              selection.removeRange(range);
                               return false;
                             }
                         }
