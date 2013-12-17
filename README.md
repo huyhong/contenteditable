@@ -10,6 +10,7 @@ See demo on http://labs.fellipesoares.com/plugins/contenteditable
 $("#...").contentEditable({
   "placeholder" : "Enter some content",
   "newLineOnEnterKey" : false,
+        // "br" to insert a <br> tag in place of a paragraph tag
   "onActivate" : function(){
         // DO something here
   },
